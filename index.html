@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VIZORA – Computer Vision Face Analysis Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+        <h1>VIZORA</h1>
+        <p class="tagline">
+            Computer Vision Face Analysis Tool
+        </p>
+
+        <p class="desc">
+            VIZORA performs intelligent face detection on images and live video
+            using OpenCV-based computer vision techniques.
+        </p>
+
+        <div class="info-box">
+            ✔ Real-time Detection<br>
+            ✔ Face Count Analysis<br>
+            ✔ Image & Webcam Support
+        </div>
+
+        <div class="footer">
+            Computer Vision Project
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+
+        <div class="card">
+            <h3>🖼 Image Face Detection</h3>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" required>
+                <button type="submit">Analyze Image</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>📹 Live Webcam Detection</h3>
+            <a href="/webcam" target="_blank">
+                <button class="webcam-btn">Launch Camera</button>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
